@@ -1,4 +1,4 @@
-package com.example.loginlab;
+package com.example.eecs4443lab1;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
