@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goToWelcome(String username) {
-        Intent i = new Intent(this, WelcomeActivity.class);
+        Intent i = new Intent(this, welcome.class);
         i.putExtra("username", username);
         startActivity(i);
     }
