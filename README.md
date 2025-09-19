@@ -23,3 +23,18 @@ Group Members:
 - [ ] Welcome Screen
   - [ ] On successful login, navigate to a new activity using intents.
 - [ ] Optional Extensions:
+  - [ ] Create a registration page that allows users to input
+    - [ ] Username
+    - [ ] Password
+  - [ ] Store these credentials in memory or a simple file
+  - [ ] Adjust login validation to check against registered users
+- [ ] Points to Remmember:
+  - [ ] Use approipriate layout 
+  - [ ] Add comments to the code
+  - [ ] Keep project oraganized
+  - [ ] Short README file:
+    - [ ] List group members
+    - [ ] Include a short group contribution
+    - [ ] Limitations (if any) or incomplete parts
+  - [ ] Ensures that the project runs without errors
+  
