@@ -5,3 +5,5 @@ Group Members:
 - Muhammmad Zamin
 - Daniel Chahine
 - Yuriy Kotyashko
+
+Division of work among members:
