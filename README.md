@@ -3,5 +3,9 @@
 Group Members:
 
 Stefewn Johnson
+
 Muhammmad Zamin
-Daniel
+
+Daniel Chahine
+
+Yuriy Kotyashko
