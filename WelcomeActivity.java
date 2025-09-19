@@ -1,4 +1,4 @@
-package com.example.loginlab;
+package com.example.eecs4443lab1;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class welcome extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private static final String PREFS = "auth_prefs";
     private static final String KEY_REMEMBER = "remember";
