@@ -1,11 +1,12 @@
 # EECS4443Lab1
 
-Group Members:
+## Group Members:
 - Stefewn Johnson
 - Muhammmad Zamin
 - Daniel Chahine
 - Yuriy Kotyashko
 
+## Requirements Checklist:
 - [ ] Build a login page using XML layouts
 - [ ] The UI must contain:
   - [ ] 2 EditText fields for username and password
@@ -37,4 +38,8 @@ Group Members:
     - [ ] Include a short group contribution
     - [ ] Limitations (if any) or incomplete parts
   - [ ] Ensures that the project runs without errors
-  
+
+## Key Notes:
+1. The project should be named "EECS4443Lab1" in order to match with the java package headers.
+2. When creating a new activity for the welcome screen, make sure the activity is called "Welcome" (not WelcomeActivity or any other variation).
+3. When creating a another new activity for the registration screen, make sure the activity is called "Register" (not RegisterActivity or any other variation).
