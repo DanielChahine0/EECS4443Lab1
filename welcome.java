@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity {
 
     private static final String PREFS = "auth_prefs";
     private static final String KEY_REMEMBER = "remember";
