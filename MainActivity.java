@@ -1,4 +1,4 @@
-package com.example.loginlab;
+package com.example.eecs4443lab1;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goToWelcome(String username) {
-        Intent i = new Intent(this, welcome.class);
+        Intent i = new Intent(this, WelcomeActivity.class);
         i.putExtra("username", username);
         startActivity(i);
     }
