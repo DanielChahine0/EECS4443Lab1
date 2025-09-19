@@ -1,3 +1,7 @@
 # EECS4443Lab1
 
-This course is stupid
+Group Members:
+- Stefewn Johnson
+- Muhammmad Zamin
+- Daniel Chahine
+- Yuriy Kotyashko
