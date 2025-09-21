@@ -24,20 +24,20 @@
 - [x] Welcome Screen
   - [x] On successful login, navigate to a new activity using intents.
 - [ ] Optional Extensions:
-  - [ ] Create a registration page that allows users to input
-    - [ ] Username
-    - [ ] Password
+  - [x] Create a registration page that allows users to input
+    - [x] Username
+    - [x] Password
   - [ ] Store these credentials in memory or a simple file
   - [ ] Adjust login validation to check against registered users
 - [ ] Points to Remmember:
   - [x] Use approipriate layout 
-  - [ ] Add comments to the code
+  - [x] Add comments to the code
   - [x] Keep project oraganized
   - [ ] Short README file:
     - [x] List group members
     - [x] Include a short group contribution
     - [ ] Limitations (if any) or incomplete parts
-  - [ ] Ensures that the project runs without errors
+  - [x] Ensures that the project runs without errors
 
 ## Key Notes:
 1. The project should be named "EECS4443Lab1" in order to match with the java package headers.
