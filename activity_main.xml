@@ -1,89 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<!--since this is a simple login screen we decided to use linear layout for the structure -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="24dp">
 
+<!--    holds the login title text which is centered, bolded, with defined margin and font size-->
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Login"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp" />
 
+<!--    username input box -->
     <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="0dp"
+        android:id="@+id/username"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:inputType="text"
+        android:layout_marginTop="16dp" />
 
+<!--    password input box-->
     <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/etUsername"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp" />
 
-    <CheckBox
-        android:id="@+id/cbShowPassword"
-        android:layout_width="wrap_content"
+<!--    horizontal linear layout for the checkboxes-->
+    <LinearLayout
+        android:id="@+id/checkBoxRow"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show password"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+<!-- checkboxes for showing password and remember me, -->
+<!-- we wanted to even out the space the checkboxes took -->
+<!-- so we used layout_width=0 with weight=1 to first ignore natural width-->
+<!-- and then divide space based on the weights, like how it works in css grids-->
+        <CheckBox
+            android:id="@+id/checkBoxPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Show password" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRemember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Remember me" />
+    </LinearLayout>
+
+
+<!--    horizontal layout for the buttons, works similarly to the checkboxes one-->
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:onClick="handleLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:onClick="handleCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+<!--    registration button forthe optional requirement-->
+    <Button
+        android:id="@+id/buttonRegister"
+        android:onClick="handleRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
         android:layout_marginTop="8dp"/>
 
-    <CheckBox
-        android:id="@+id/cbRememberMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remember me"
-        app:layout_constraintTop_toBottomOf="@id/cbShowPassword"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
-        android:layout_marginTop="4dp"/>
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:onClick="onLoginClick"
-        app:layout_constraintTop_toBottomOf="@id/cbRememberMe"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"/>
-
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:onClick="onCancelClick"
-        app:layout_constraintTop_toTopOf="@id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+<!--    for status updates, such as login successful-->
     <TextView
-        android:id="@+id/tvMessage"
-        android:layout_width="0dp"
+        android:id="@+id/message"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+</LinearLayout>
