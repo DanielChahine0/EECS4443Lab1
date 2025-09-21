@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void welcome(String username) {
-        Intent i = new Intent(this, Welcome.class); // go from current activity to welcome
+        Intent i = new Intent(this, WelcomeActivity.class); // go from current activity to welcome
         i.putExtra("username", username); // passes the username to that activity so it can display it
         startActivity(i); // starts the activity
     }
