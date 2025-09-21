@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
             }
             etPassword.setSelection(etPassword.getText().length());
         });
+
+        findViewById(R.id.btnGoToRegister).setOnClickListener(v -> {
+            Intent i = new Intent(this, Register.class);
+            startActivityForResult(i, 1001); // deprecated but fine for simple labs; or use ActivityResult APIs
+        });
+
     }
 
     public void onLoginClick(View v) {
@@ -96,5 +102,18 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, WelcomeActivity.class);
         i.putExtra("username", username);
         startActivity(i);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1001 && resultCode == RESULT_OK && data != null) {
+            String newUser = data.getStringExtra("new_username");
+            if (newUser != null) {
+                // Pre-fill username field if your login XML has, e.g., @id/etUsername
+                EditText etUsername = findViewById(R.id.etUsername);
+                etUsername.setText(newUser);
+            }
+        }
     }
 }
