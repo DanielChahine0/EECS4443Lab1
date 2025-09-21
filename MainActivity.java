@@ -72,8 +72,20 @@ public class MainActivity extends AppCompatActivity {
         if (u.isEmpty()) { etUsername.setError("Required"); return; }
         if (p.isEmpty()) { etPassword.setError("Required"); return; }
 
-        // Hardcoded auth (or replace with file-based later)
-        if (DEMO_USER.equals(u) && DEMO_PASS.equals(p)) {
+        // First check registered users in SharedPreferences (optional Register extension)
+        SharedPreferences userPrefs = getSharedPreferences("users_prefs", MODE_PRIVATE);
+        String saved = userPrefs.getString(u, null);
+
+        boolean authenticated = false;
+        if (saved != null && saved.equals(p)) {
+            // valid via registered user
+            authenticated = true;
+        } else if (DEMO_USER.equals(u) && DEMO_PASS.equals(p)) {
+            // valid via fallback hardcoded credentials (lab baseline)
+            authenticated = true;
+        }
+
+        if (authenticated) {
             tvMessage.setText("Login successful");
 
             // Remember me
