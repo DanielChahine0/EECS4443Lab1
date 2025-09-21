@@ -68,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
         if (user.isEmpty()) { username.setError("Required"); return; }
         if (pass.isEmpty()) { password.setError("Required"); return; }
 
-        // authentication logic
+        // get the instance of DB
+        SharedPreferences sp = getSharedPreferences("registeredUsers", MODE_PRIVATE);
+
+        // authentication logic comparing from simulated DB
         if (simulatedUser.equals(user) && simulatedPassword.equals(pass)) {
             message.setText("Login successful");
 
@@ -81,6 +84,24 @@ public class MainActivity extends AppCompatActivity {
 
             welcome(user);
             finish();
+        // if user in db then check the password
+        } else if (sp.contains(user)) {
+            String storedPass = sp.getString(user, "");
+            if (storedPass.equals(pass)) {
+                message.setText("Login successful");
+
+                // checks if the user needs to be remembered and remmembers them
+                SharedPreferences prefs = getSharedPreferences(authPref, MODE_PRIVATE);
+                prefs.edit()
+                        .putBoolean(keyRemember, checkBoxRemember.isChecked())
+                        .putString(keyUsername, user)
+                        .apply();
+
+                welcome(user);
+                finish();
+            } else {
+                message.setText("Invalid username/password");
+            }
         } else {
             message.setText("Invalid username/password");
         }
@@ -98,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
     private void welcome(String username) {
         Intent i = new Intent(this, WelcomeActivity.class); // go from current activity to welcome
         i.putExtra("username", username); // passes the username to that activity so it can display it
+        startActivity(i); // starts the activity
+    }
+
+    // redirects users to registration page when create account button is pressed
+    public void handleRegister(View v) {
+        Intent i = new Intent(this, RegisterActivity.class); // go from current activity to registration
         startActivity(i); // starts the activity
     }
 }
