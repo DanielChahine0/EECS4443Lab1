@@ -1,10 +1,10 @@
 # EECS4443Lab1
 
 ## Group Members and Division of Work:
-- Stefewn Johnson (worked on XML)
-- Muhammmad Zamin (worked on the layouts in XML and added finishing touches to the java file)
-- Daniel Chahine (Worked on java files)
-- Yuriy Kotyashko (Worked on java files)
+- Stefewn Johnson
+- Muhammmad Zamin
+- Daniel Chahine
+- Yuriy Kotyashko
 
 ## Requirements Checklist:
 - [x] Build a login page using XML layouts
