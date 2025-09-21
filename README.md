@@ -1,10 +1,10 @@
 # EECS4443Lab1
 
-## Group Members:
-- Stefewn Johnson
-- Muhammmad Zamin
-- Daniel Chahine
-- Yuriy Kotyashko
+## Group Members and Division of Work:
+- Stefewn Johnson (worked on XML)
+- Muhammmad Zamin (worked on the layouts in XML and added finishing touches to the java file)
+- Daniel Chahine (Worked on java files)
+- Yuriy Kotyashko (Worked on java files)
 
 ## Requirements Checklist:
 - [x] Build a login page using XML layouts
@@ -23,20 +23,20 @@
   - [x] On app launch, if the username is remembered, skip login page and go to welcome screen
 - [x] Welcome Screen
   - [x] On successful login, navigate to a new activity using intents.
-- [ ] Optional Extensions:
+- [X] Optional Extensions:
   - [x] Create a registration page that allows users to input
     - [x] Username
     - [x] Password
-  - [ ] Store these credentials in memory or a simple file
-  - [ ] Adjust login validation to check against registered users
+  - [X] Store these credentials in memory or a simple file
+  - [X] Adjust login validation to check against registered users
 - [ ] Points to Remmember:
   - [x] Use approipriate layout 
   - [x] Add comments to the code
   - [x] Keep project oraganized
-  - [ ] Short README file:
+  - [X] Short README file:
     - [x] List group members
     - [x] Include a short group contribution
-    - [ ] Limitations (if any) or incomplete parts
+    - [X] Limitations (if any) or incomplete parts
   - [x] Ensures that the project runs without errors
 
 ## Key Notes:
@@ -45,5 +45,11 @@
 3. When creating a another new activity for the registration screen, make sure the activity is called "Register" (not RegisterActivity or any other variation).
 
 ## Group Contributions:
+Each member put in equal amount of effort
+- Stefewn Johnson (worked on XML)
+- Muhammmad Zamin (worked on the layouts in XML and added finishing touches to the java file)
+- Daniel Chahine (Worked on java files)
+- Yuriy Kotyashko (Worked on java files)
 
-## Limitations:1
+## Limitations:
+All parts are complete
